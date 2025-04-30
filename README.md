@@ -15,15 +15,6 @@
 
 ---
 
-## 📱 Screenshots
-
-![FiveBallFury Gameplay](https://i.postimg.cc/XYZ123/your-image.png)
-
-![FiveBallFury Gameplay](https://postimg.cc/Mcn2BBmr)
-
-
----
-
 ## 🛠 What I Learned with SpriteKit & Swift
 
 Working on **FiveBallFury** helped me explore several core concepts in SpriteKit development:
