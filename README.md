@@ -17,9 +17,9 @@
 
 ## 📱 Screenshots
 
-[url=https://postimg.cc/ykTHCsNn][img]https://i.postimg.cc/ykTHCsNn/Simulator-Screenshot-i-Pad-Pro-13-inch-M4-2025-04-30-at-16-18-50.png[/img][/url]
+![FiveBallFury Gameplay](https://i.postimg.cc/XYZ123/your-image.png)
 
-[url=https://postimg.cc/Mcn2BBmr][img]https://i.postimg.cc/Mcn2BBmr/Simulator-Screenshot-i-Pad-Pro-13-inch-M4-2025-04-30-at-16-19-14.png[/img][/url]
+![FiveBallFury Gameplay](https://postimg.cc/Mcn2BBmr)
 
 
 ---
