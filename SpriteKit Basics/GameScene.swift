@@ -10,6 +10,7 @@ import SpriteKit
 class GameScene: SKScene, SKPhysicsContactDelegate {
     var scoreLabel:SKLabelNode!
     var ballLabel: SKLabelNode!
+    var resetLabel: SKLabelNode!
     
     var score = 0 {
         didSet {
@@ -66,8 +67,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ballLabel.text = "Balls: \(remainingBalls)"
         ballLabel.horizontalAlignmentMode = .left
         ballLabel.position = CGPoint(x: 200, y: 700)
-        
         addChild(ballLabel)
+        
+        resetLabel = SKLabelNode(fontNamed: "Chalkduster")
+        resetLabel.text = "Reset"
+        resetLabel.position = CGPoint(x: 500, y: 700)
+        addChild(resetLabel)
+        
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
         physicsWorld.contactDelegate = self
         
@@ -94,6 +100,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         print("location: \(location)")
         if objects.contains(editLabel){
             editingMode.toggle()
+        } else if objects.contains(resetLabel) {
+            resetGame()
         }else {
             if editingMode {
                 let size = CGSize(width: Int.random(in: 16...128), height: 16)
@@ -191,6 +199,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             collision(between: nodeA, object:nodeB)
         }else if nodeB.name == "ball" {
             collision(between: nodeB, object: nodeA)
+        }
+    }
+    
+    func resetGame() {
+        score = 0
+        remainingBalls = 5
+        
+        for node in children {
+            if node.name == "ball" || node.name == "box" {
+                node.removeFromParent()
+            }
         }
     }
 }
