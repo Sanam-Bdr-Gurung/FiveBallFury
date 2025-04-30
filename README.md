@@ -17,8 +17,8 @@
 
 ## 📱 Screenshots
 
-> ![ScreenShot](https://raw.github.com/Sanam-Bdr-Gurung/FiveBallFury/main/images/image1.png)
-> ![ScreenShot](https://raw.github.com/Sanam-Bdr-Gurung/FiveBallFury/main/images/image2.png)
+> ![Kiku](images/image1.png)
+> ![Kiku](images/image2.png)
 
 ---
 
