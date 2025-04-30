@@ -7,7 +7,7 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func didMove(to view: SKView) {
         let background = SKSpriteNode(imageNamed: "background")
@@ -17,6 +17,7 @@ class GameScene: SKScene {
         addChild(background)
        
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
+        physicsWorld.contactDelegate = self
         
         makeBouncer(at:CGPoint(x: 0, y: 0))
         makeBouncer(at:CGPoint(x: 256, y: 0))
@@ -37,8 +38,10 @@ class GameScene: SKScene {
        
         let ball = SKSpriteNode(imageNamed: "ballRed")
         ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width / 2)
-        ball.physicsBody?.restitution = 1
+        ball.physicsBody?.restitution = 0.8
+        ball.physicsBody?.contactTestBitMask = ball.physicsBody?.collisionBitMask ?? 0
         ball.position = location
+        ball.name = "ball"
         addChild(ball)
     }
     
@@ -57,13 +60,18 @@ class GameScene: SKScene {
         if(isGood){
             slotBase = SKSpriteNode(imageNamed: "slotBaseGood")
             slotGlow = SKSpriteNode(imageNamed: "slotGlowGood")
+            slotBase.name = "good"
         }else {
             slotBase = SKSpriteNode(imageNamed: "slotBaseBad")
             slotGlow = SKSpriteNode(imageNamed: "slotGlowBad")
+            slotBase.name = "bad"
         }
        
         slotBase.position = position
         slotGlow.position = position
+        
+        slotBase.physicsBody = SKPhysicsBody(rectangleOf: slotBase.size)
+        slotBase.physicsBody?.isDynamic = false
         
         addChild(slotBase)
         addChild(slotGlow)
