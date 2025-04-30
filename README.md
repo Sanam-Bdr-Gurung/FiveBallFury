@@ -17,8 +17,8 @@
 
 ## 📱 Screenshots
 
-> ![ScreenShot](https://raw.github.com/Sanam-Bdr-Gurung/FiveBallFury/main/Screen Shots/Simulator Screenshot - iPad Pro 13-inch (M4) - 2025-04-30 at 16.18.50.png)
-> ![ScreenShot](https://raw.github.com/Sanam-Bdr-Gurung/FiveBallFury/main/Screen Shots/Simulator Screenshot - iPad Pro 13-inch (M4) - 2025-04-30 at 16.19.14.png
+> ![ScreenShot](https://raw.github.com/Sanam-Bdr-Gurung/FiveBallFury/main/images/image1.png)
+> ![ScreenShot](https://raw.github.com/Sanam-Bdr-Gurung/FiveBallFury/main/images/image2.png)
 
 ---
 
